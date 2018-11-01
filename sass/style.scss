@@ -57,7 +57,7 @@ body {
 }
 
 section {
-    position: relative;
+    display: grid;
 }
 
 .container {
@@ -67,6 +67,7 @@ section {
     min-height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    place-self: center;
 
     .header {
         grid-area: header;
@@ -194,7 +195,8 @@ section {
         input[type="text"] {
             border: none;
             padding: 14px 0 10px 0px;
-            margin-bottom: 2px;
+            margin: 3px 0 2px;
+
             margin-left: 30px;
             width: 100%;
 
@@ -362,4 +364,27 @@ p.sign-active {
     color: $primary-color;
     border-bottom: 2px solid $primary-color;
     opacity: 1;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 80%;
+        grid-template-columns: 1fr;
+        border-radius: 0;
+
+        .left,
+        .right {
+            border-radius: 0;
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        width: 100%;
+    }
 }
