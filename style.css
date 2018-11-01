@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    position: relative;
+    background: #ffb76b;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #ffb76b 0%, #ffa73d 50%, #ff7f04 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #ffb76b 0%, #ffa73d 50%, #ff7f04 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #ffb76b 0%, #ffa73d 50%, #ff7f04 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb76b', endColorstr='#ff7f04', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right,
+.left {
+    min-width: 300px;
+}
+
+.left {
+    width: 40%;
+    max-width: 300px;
+    height: 400px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5e5e5e+0,000000+100 */
+    background: rgb(94, 94, 94);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(94, 94, 94, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(94, 94, 94, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(94, 94, 94, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5e5e5e', endColorstr='#000000', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+
+.company {
+    color: white;
+    font-size: 16px;
+    margin: 40px 0 0 35px;
+}
+
+.desc,
+.learnMoreLabel {
+    color: #f49542;
+    font-size: 35px;
+    margin-left: 35px;
+}
+
+.learnMoreLabel {
+    position: absolute;
+    bottom: -100px;
+    margin-left: 70px;
+    font-size: 14px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.learnMoreLabel:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.learnMoreLabel:hover .line {
+    border-top: 2px solid white;
+}
+
+.line {
+    content: "";
+    position: absolute;
+    height: 3px;
+    border-top: 2px solid #f49542;
+    top: 7px;
+    left: -35px;
+    width: 25px;
+    transition: 0.5s;
+}
+
+.right {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 40%;
+    max-width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+}
+
+.sign {
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .5;
+    font-size: 20px;
+}
+
+.sign * {
+    transition: 0.3s;
+    margin: 20px 30px 30px 0px;
+}
+
+.sign p {
+    padding-bottom: 10px;
+    /* border-bottom: 2px solid white;*/
+}
+
+.sign p:hover {
+    opacity: 1;
+    color: #f49542;
+    border-bottom: 2px solid #f49542;
+    cursor: pointer;
+}
+
+.sign span {
+    font-size: 14px;
+}
+
+.sign-active {
+    color: #f49542;
+    border-bottom: 2px solid #f49542;
+}
+
+form input[type="text"] {
+    opacity: .4;
+    border: none;
+    border-bottom: 1px solid;
+    padding: 18px 30px 10px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    opacity: 1;
+    outline: 0;
+}
+
+input[type="text"] {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 5px 15px;
+}
+
+input[type="text"]:nth-child(1) {
+    background-image: url("http://cdn.onlinewebfonts.com/svg/img_210318.png");
+}
+
+input[type="text"]:nth-child(2) {
+    background-image: url("https://cdn2.iconfinder.com/data/icons/lightly-icons/30/mail-480.png");
+}
+
+input[type="text"]:nth-child(3) {
+    background-image: url("http://cdn.onlinewebfonts.com/svg/img_376352.png");
+}
+
+input[type="text"]:nth-child(4) {
+    background-image: url("http://cdn.onlinewebfonts.com/svg/img_266356.png");
+}
+
+.termsAgree {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+}
+
+.checkbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: -8px;
+    left: -22px;
+    height: 18px;
+    width: 18px;
+    background-color: #f49542;
+    border-radius: 3px;
+}
+
+.checkbox input:checked~.checkmark {
+    background-color: #f49542;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.terms {
+    font-size: 10px;
+}
+
+.terms a {
+    color: #f49542;
+    border-bottom: 1px solid #f49542;
+}
+
+.register button {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+50,ff7f04+100 */
+    background: #ffb76b;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #ffb76b 0%, #ffa73d 50%, #ff7f04 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #ffb76b 0%, #ffa73d 50%, #ff7f04 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #ffb76b 0%, #ffa73d 50%, #ff7f04 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb76b', endColorstr='#ff7f04', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    color: white;
+    border: none;
+    padding: 6px 16px 6px 16px;
+    border-radius: 20px;
+}
+
+.register {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 10px;
+    color: black;
+    opacity: .4;
+    outline: none;
+    border-bottom: 1px solid #f49542;
+    transition: 0.3s;
+
+}
+
+.register a:hover {
+    opacity: 1;
+    color: #f49542;
+}
+
+.signUpDiv,
+.signInDiv {
+    position: relative;
+    height: calc(100% - 100px);
+}
+
+.signUpDiv .register {
+    position: absolute;
+    bottom: 30px;
+}
+
+.signInDiv .register {
+    position: absolute;
+    bottom: 30px;
+}
+
+.signUpDiv {
+    display: none;
+}
